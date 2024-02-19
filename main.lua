@@ -1,5 +1,5 @@
 function love.load()
-    dialouge = {"A long time ago, a traveler was traversing the\nElder Mountians","Halfway through his trip, he encountered a \nterrible storm...","seeking shetler, the traveler found a cave \nand dashed into it","Hello traveller, how does it go?","I have been trapped here for melenia,\nby means of a seal","If thou aids me in a small task, you shall\nhave the cake","Will you aid me in this trifle?","...","No?","do you think you have a choice?","Now listen to me carefully","Very well, now listen to me carefully","The seal that holds me here can be broken, by \nclosing the book in the great hall","For this reason you will inhabit the mind of \na cat","now go and fufill your task","To control the cat, use the left and right arrow\nkeys to move. To jump forwards use the space key\n,and to jump up use the up arrow key","to navigate through the vents use the arrow keys,\nand to exit press space.","The buttons on the board control what vents are\nopen, to navigate use the arrow keys"}
+    dialouge = {"A long time ago, a traveler was traversing the\nElder Mountians","Halfway through his trip, he encountered a \nterrible storm...","seeking shetler, the traveler found a cave \nand dashed into it","Hello traveller, how does it go?","I have been trapped here for melenia,\nby means of a seal","If thou aids me in a small task, you shall\nhave the cake","Will you aid me in this trifle?","...","No?","do you think you have a choice?","Now listen to me carefully","Very well, now listen to me carefully","The seal that holds me here can be broken, by \nclosing the book in the great hall","For this reason you will inhabit the mind of \na cat","now go and fufill your task","To control the cat, use the left and right arrow\nkeys to move. To jump forwards use the space key\n,and to jump up use the up arrow key","to navigate through the vents use the arrow keys,\nand to exit press space.","The buttons on the board control what vents are\nopen, to navigate use the arrow keys","You should not be here","That accursed dragon must have sent you ","I am left with only one choice, You must be \nerased "}
     -- dialouge vars
     cstored = nil
     question = false
@@ -109,11 +109,11 @@ function love.load()
     end
     function wall_is_touched ()
         local isstepped = nil
-        if w1:is_touched(cat.x, cat.y) == "l" or w2:is_touched(cat.x, cat.y) == "l" or w3:is_touched(cat.x, cat.y) == "l" or w4:is_touched(cat.x, cat.y) == "l" or md1:is_touched(cat.x, cat.y) == "l" or w5:is_touched(cat.x, cat.y) == "l" or w6:is_touched(cat.x, cat.y) == "l" or w7:is_touched(cat.x, cat.y) == "l" or w8:is_touched(cat.x, cat.y) == "l" or w9:is_touched(cat.x, cat.y) == "l" or w10:is_touched(cat.x, cat.y) == "l" or w11:is_touched(cat.x, cat.y) == "l" then
+        if w1:is_touched(cat.x, cat.y) == "l" or w2:is_touched(cat.x, cat.y) == "l" or w3:is_touched(cat.x, cat.y) == "l" or w4:is_touched(cat.x, cat.y) == "l" or md1:is_touched(cat.x, cat.y) == "l" or w5:is_touched(cat.x, cat.y) == "l" or w6:is_touched(cat.x, cat.y) == "l" or w7:is_touched(cat.x, cat.y) == "l" or w8:is_touched(cat.x, cat.y) == "l" or w9:is_touched(cat.x, cat.y) == "l" or w10:is_touched(cat.x, cat.y) == "l" or w11:is_touched(cat.x, cat.y) == "l" or w12:is_touched(cat.x, cat.y) == "l" or w13:is_touched(cat.x, cat.y) == "l" then
             isstepped = "l"
-        elseif w1:is_touched(cat.x, cat.y) == "r" or w2:is_touched(cat.x, cat.y) == "r" or w3:is_touched(cat.x, cat.y) == "r" or w4:is_touched(cat.x, cat.y) == "r" or md1:is_touched(cat.x, cat.y) == "r" or w5:is_touched(cat.x, cat.y) == "r" or w6:is_touched(cat.x, cat.y) == "r" or w7:is_touched(cat.x, cat.y) == "r" or w8:is_touched(cat.x, cat.y) == "r" or w9:is_touched(cat.x, cat.y) == "r" or w10:is_touched(cat.x, cat.y) == "r" or w11:is_touched(cat.x, cat.y) == "r" then
+        elseif w1:is_touched(cat.x, cat.y) == "r" or w2:is_touched(cat.x, cat.y) == "r" or w3:is_touched(cat.x, cat.y) == "r" or w4:is_touched(cat.x, cat.y) == "r" or md1:is_touched(cat.x, cat.y) == "r" or w5:is_touched(cat.x, cat.y) == "r" or w6:is_touched(cat.x, cat.y) == "r" or w7:is_touched(cat.x, cat.y) == "r" or w8:is_touched(cat.x, cat.y) == "r" or w9:is_touched(cat.x, cat.y) == "r" or w10:is_touched(cat.x, cat.y) == "r" or w11:is_touched(cat.x, cat.y) == "r" or w12:is_touched(cat.x, cat.y) == "r" or w13:is_touched(cat.x, cat.y) == "r" then
             isstepped = "r"
-        elseif w1:is_touched(cat.x, cat.y) == false and w2:is_touched(cat.x, cat.y) == false and w3:is_touched(cat.x, cat.y) == false and w4:is_touched(cat.x, cat.y) == false and md1:is_touched(cat.x, cat.y) == false and w6:is_touched(cat.x, cat.y) == false and w5:is_touched(cat.x, cat.y) == false and w7:is_touched(cat.x, cat.y) == false and w8:is_touched(cat.x, cat.y) == false and w9:is_touched(cat.x, cat.y) == false and w10:is_touched(cat.x, cat.y) == false and w11:is_touched(cat.x, cat.y) == false then
+        elseif w1:is_touched(cat.x, cat.y) == false and w2:is_touched(cat.x, cat.y) == false and w3:is_touched(cat.x, cat.y) == false and w4:is_touched(cat.x, cat.y) == false and md1:is_touched(cat.x, cat.y) == false and w6:is_touched(cat.x, cat.y) == false and w5:is_touched(cat.x, cat.y) == false and w7:is_touched(cat.x, cat.y) == false and w8:is_touched(cat.x, cat.y) == false and w9:is_touched(cat.x, cat.y) == false and w10:is_touched(cat.x, cat.y) == false and w11:is_touched(cat.x, cat.y) == false and w12:is_touched(cat.x, cat.y) == false and w13:is_touched(cat.x, cat.y) == false then
             isstepped = false
         end
         return isstepped
@@ -135,7 +135,7 @@ function love.load()
     sidewaysb = {}
     Platform:new(floor)
     floor.x1 = -1000
-    floor.x2 = 12000
+    floor.x2 = 25000
     floor.y = 350
     floor.limit = 900
     Platform:new(bedplatform)
@@ -254,6 +254,18 @@ function love.load()
     w11.y1 = 1000
     w11.y2 = -1000
     w11.limit = 25
+    w12 = {}
+    Wall:new(w12)
+    w12.x = 12150
+    w12.y1 = 1000
+    w12.y2 = -1000
+    w12.limit = 25
+    w13 = {}
+    Wall:new(w13)
+    w13.x = 2000
+    w13.y1 = 1000
+    w13.y2 = 0
+    w13.limit = 25
     md1 = {}
     Wall:new(md1)
     md1.x = 2900
@@ -270,7 +282,7 @@ function love.load()
     cat.moving = false
     cat.canmoveleft = true
     cat.canmoveright = true
-    the_offset_of_all_things = 49
+    the_offset_of_all_things = -49
     the_offset_of_all_things1 = 0
     cat_object_movement1 = true
     gravity = true
@@ -303,14 +315,24 @@ function love.load()
     mboardswitch = false
     mbchoice = 0
     mbchoice1 = 1
-    mbchoice2 = 0
     last_mod = "1"
     trapdoors_openingcut = 0
     doors_openingtime = 0
     flashofawakening = 0
     explanation_counter = 0
     prevention = true
-    key = true 
+    key1 = {}
+    key1[1] = 0
+    key1[2] = 0
+    boss1 = false
+    boss_attack = 0
+    attack_positions =  {}
+    wizardpos = -230
+    wizardswitch = true
+    wizardframe = 0
+    wizard_second = 0
+    wizard_time = 0
+    time = 0
     -- end of cat game vars, for now
 
     require "intro"
@@ -319,6 +341,7 @@ function love.load()
     require "vents"
     require "draw"
     require "cat"
+    require "boss"
 
     intro_num = 0
     intervaltobeused = 0
@@ -338,29 +361,7 @@ function love.load()
     
 
 
-    vent_animation = true
-    the_offset_of_all_things = -9600
-    cat.x = 168
-    the_offset_of_all_things1 = 300
-    cat.y = 100
-
-    love.graphics.setColor(0.9,0.9,0.9)
-    jump_switc2 = true
-    jump_progress = 0
-    jump_switc3 = false
-    jump_switch = true
-    jump_progress2 = 0
-    jump_grav = 0.3
-    jump_input = 40
-    jump = true
-    jump_input = 49
-    ventsentrylog = true
-    vent_animation = false
-    vastored = nil
-    vexitanim = false
-    cat_ventpos = vastored
-    cat.wayfacing = true
-    stage = "cat"
+ 
     audio_intro = love.audio.newSource("intro_drama.mp3","static")
     music1 = love.audio.newSource("27 - 1. Moderato.mp3","stream")
     music1:setLooping(true)
@@ -415,7 +416,7 @@ function love.update(dt)
         end
 
 
-        if cat.canmoveright == true and cat.canmoveleft == true and love.keyboard.isDown("space") == false and love.keyboard.isDown("up") == true and jump == false and jump2 == false then
+        if cat.canmoveright == true and cat.canmoveleft == true and love.keyboard.isDown("space") == false and love.keyboard.isDown("up") == true and jump == false and jump2 == false and dialouge_num ~= 21 then
             if intervaltobeused + 0.2 < os.clock() and jump_input2 < 150 then
                 jump_input2 = jump_input2 + 1
             end
@@ -428,7 +429,7 @@ function love.update(dt)
                 end
             end
         end
-        if dialouge_talk ~= true and wall_is_touched() ~= "l" and love.keyboard.isDown("space") == true and love.keyboard.isDown("up") == false and jump == false and jump2 == false then
+        if dialouge_talk ~= true and wall_is_touched() ~= "l" and love.keyboard.isDown("space") == true and love.keyboard.isDown("up") == false and jump == false and jump2 == false and dialouge_num ~= 21 then
             if w10:is_touched(cat.x,cat.y) == "r" or w10:is_touched(cat.x,cat.y) ~= "r" and wall_is_touched() ~= "r" then
                 if intervaltobeused + 0.2 < os.clock() and jump_input < 150 then
                     jump_input = jump_input + 1
@@ -490,7 +491,6 @@ function love.draw()
             end
         end
         love.graphics.setFont(gameFont)
-        love.graphics.print(intro_num)
         love.graphics.setColor(0.9,0.9,0.9)
         love.graphics.print(" .------~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~------.", 72, 400)
         love.graphics.print("\n/						                           \\", 72, 400)
@@ -541,8 +541,10 @@ function love.draw()
     love.graphics.setColor(0.9,0.9,0.9)
     board()
     end
-    if explanation_counter == 0 and stage == "cat" and cat.x - the_offset_of_all_things > 200 then
+    if explanation_counter == 0 and stage == "cat" and time + 3 < intro_num then
         dialouge_num = 16
+        dialouge_talk = true
+        dialouge_switch = true
         dialouge_talk = true
         explanation_counter = explanation_counter + 1
     elseif explanation_counter == 1 and stage == "vents" then
@@ -562,16 +564,19 @@ function love.draw()
         dialouge_talk = false
         prevention = true
     end
-    love.graphics.print("\t\t\t\t\t" .. tostring(cat.canmoveright))
 
 end
 function love.keypressed(key)
     if key == "space" then
+        if dialouge_num == 21 then
+            love.event.quit()
+        end
         if dialouge_finished == true and stage ~= "intro" then
             if space_counter == 0 then
                 space_counter = 1
                 if dialouge_num == 14 then
                     stage = "cat"
+                    time = intro_num
                     cstored = nil
                     question = false
                     choice = 3
@@ -584,58 +589,62 @@ function love.keypressed(key)
                     current_dialouge = dialouge[dialouge_num]
                     dialouge_talk = false
                     dialouge_num = 1
+                    moving_mountian = 24
                 end
                 if prevention == true then
                     prevention = false
                 end
             end
-            dialouge_finished = false
+            if dialouge_num > 18 and dialouge_num < 21 then
+                dialouge_num = dialouge_num + 1
+            end
+            if dialouge_num == 21 then
+                dialouge_talk = false
+            else    
+                dialouge_finished = false
+            end
+
         end
         if stage == "vents" and moving_mountian > 10 and dialouge_talk ~= true then
             if cat_ventpos == 0 then
-                if mbchoice1 == 0 or mbchoice2 == 0 then
                     moving_mountian = 20
                     vexitanim = "left"
-                end
             elseif cat_ventpos == 2 then
                 moving_mountian = 20
                 vexitanim = "left"
             elseif cat_ventpos == 4 then
-                --if mbchoice1 == 2 or mbchoice2 == 2 then
+                if mbchoice1 == 0 and mbchoice == 2 then
                     moving_mountian = 20
                     vexitanim = "right"
-                --end
-            elseif cat_ventpos == 5 then
-                --if mbchoice1 == 2 or mbchoice2 == 2 then
+                end
+            elseif cat_ventpos == 5 and mbchoice == 2 then
+                if mbchoice1 == 0 then
                     moving_mountian = 20
                     vexitanim = "left"
-                --end
-            elseif cat_ventpos == 8 then
-                --if mbchoice1 == 2 or mbchoice2 == 2 then
+                end
+            elseif cat_ventpos == 8 and mbchoice == 2 then
+                if mbchoice1 == 1 then
                     moving_mountian = 20
                     vexitanim = "left"
-                --end
-            elseif cat_ventpos == 10 then
-                --if mbchoice1 == 2 or mbchoice2 == 2 then
+                end
+            elseif cat_ventpos == 10 and mbchoice == 2 then
+                if mbchoice1 == 1 then
                     moving_mountian = 20
                     vexitanim = "left"
-                --end
+                end
+            elseif cat_ventpos == 11 and mbchoice == 2 then
+                    moving_mountian = 20
+                    if key1[1] == 1 and key1[2] == 1 then
+                    vexitanim = "right"
+                    end
             end
         elseif stage == "gb" then
-            if mbchoice == 7 then
+            if mbchoice == 2 then
                 mboardtimer = intro_num
                 vent_animation = true
                 moving_mountian = 60
-            elseif last_mod == "1" then
-                if mbchoice2 ~= mbchoice and mbchoice1 ~= mbchoice then
-                    mbchoice2 = mbchoice
-                    last_mod = "2"
-                end
-            elseif last_mod == "2" then
-                if mbchoice2 ~= mbchoice and mbchoice1 ~= mbchoice then
-                    mbchoice1 = mbchoice
-                    last_mod = "1"
-                end
+            else
+                mbchoice1 = mbchoice
             end
         end
     elseif key == "up" then
@@ -745,7 +754,7 @@ function love.keypressed(key)
                 vastored = 9
                 vent_animation = true
             end
-        elseif stage == "gb" and mbchoice < 7 then
+        elseif stage == "gb" and mbchoice < 3 then
             mbchoice = mbchoice + 1
         end
     end

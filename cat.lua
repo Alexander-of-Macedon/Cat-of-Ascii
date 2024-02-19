@@ -1,7 +1,7 @@
 function cat_game()
     boxtop.x1 = box1.x - 50
     boxtop.x2 = box1.x + 50
-    if the_offset_of_all_things == -8450 and the_offset_of_all_things1 == 300 then
+    if the_offset_of_all_things == -8550 and the_offset_of_all_things1 == 300 then
         jump = false
         jump_switc3 = true
     end
@@ -58,6 +58,7 @@ function cat_game()
         vexitanim = true
     elseif cat.x > (8150 + the_offset_of_all_things) and cat.x < (8180 + the_offset_of_all_things) then
         if moving_mountian < 1 then
+            key1[1] = 1
             stage = "vents"
             cat.wayfacing = false
         end
@@ -71,6 +72,7 @@ function cat_game()
         vexitanim = true
     elseif cat.x > (9990 + the_offset_of_all_things) and cat.x < (10010 + the_offset_of_all_things) then
         if moving_mountian < 1 then
+            key1[2] = 1
             stage = "vents"
             cat.wayfacing = false
         end
@@ -83,9 +85,9 @@ function cat_game()
         cat_ventpos = 10
         vexitanim = true
     end
-    love.graphics.print(tostring(cat.y + the_offset_of_all_things1))
-    if cat.x > (9160 + the_offset_of_all_things) and cat.x < (9250 + the_offset_of_all_things) and cat.y + the_offset_of_all_things1 > 350 and cat.y + the_offset_of_all_things1 < 360 then
-        key = false
+
+    if cat.x > (15900 + the_offset_of_all_things) then
+        boss1 = true
     end
     if cat.x > (2840 + the_offset_of_all_things) and cat.x < (3090 + the_offset_of_all_things) and cat.y >= (340 +the_offset_of_all_things1) then
         facplatstep = true
@@ -125,8 +127,12 @@ function cat_game()
             doors_openingtime = intro_num
         end
     end
+    if boss1 == true or boss1 == "fight" then
+
+        boss()
 
 
+    end
     if cat.y <  80 and intervaltobeused + 0.2 < os.clock() then
         the_offset_of_all_things1 = the_offset_of_all_things1 + 5
         cat.y = cat.y + 5

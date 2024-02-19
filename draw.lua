@@ -1,8 +1,28 @@
 function draw()
+
     love.graphics.setColor(0.4,0.4,0.4)
     love.graphics.print(" _______\n|   |___|\n|     __|______\n|    |         |\n|____|_________|",8760 + the_offset_of_all_things,300 + the_offset_of_all_things1)
     love.graphics.print("           ___\n          |   |\n    ______|_  |\n __|*%|    _|_|__\n|  |__|   |      |\n|__|______|______|",9350 + the_offset_of_all_things,300 + the_offset_of_all_things1)
     love.graphics.print("         _______\n  ______|___    |\n |__________|___|____\n|  /              \\  |\n| /      ______    \\ |\n|/ _____|      |    \\|\n| |     |      |___  |\n|_|_____|______|___|_|\n|  /              \\  |\n| /     ___   ____ \\ |\n|/ ____|   | /    \\ \\|\n| |    |   ||  ()  | |\n|_|____|___|_\\____/__|\n|                    |",9600 + the_offset_of_all_things,130 + the_offset_of_all_things1)
+    love.graphics.setFont(gameFont1)
+    love.graphics.setColor(1,1,1)
+    if wizardframe == 0 then
+        love.graphics.print(" (\\.   \\      ,/)\n  \\(   |\\     )/\n  //\\  |M\\   /\\\\\n (/ /\\_$oo$_/\\ \\)\n  \\/\\_ #### _/\\/\n      \\`##'/\n       |  |\n       |  |\n      /    \\\n   _.'      '._\n -'-...____...-'-",16050 + the_offset_of_all_things, wizardpos + the_offset_of_all_things1)
+    end
+    if wizardframe == 2 or dragon_action == "false" and wizardpos >= 50 then
+        love.graphics.print("       \\\n       |\\\n       |M\\\n       $oo$\n      _#**#_\n     /:`##':\\\n    /\\/|  |\\/\\\n   /\\ \\|  |/ /\\\n  (/'\\/    \\/'\\)\n   _.'      '._\n -'-...____...-'-",16050 + the_offset_of_all_things, wizardpos + the_offset_of_all_things1)
+    elseif wizardframe == 1 or dragon_action == "true" and wizardpos >= 50 then
+        love.graphics.print("       \\\n       |\\\n       |M\\\n       $oo$\n      _####_\n     /:`##':\\\n    /\\/|  |\\/\\\n   /\\ \\|  |/ /\\\n  (/'\\/    \\/'\\)\n   _.'      '._\n -'-...____...-'-",16050 + the_offset_of_all_things, wizardpos + the_offset_of_all_things1)
+    end
+    if wizardpos > 20 then
+        love.graphics.setColor(0.5,0.5,0.5)
+    elseif wizardpos > -110 then
+        love.graphics.setColor(0.7,0.7,0.7)
+    end
+    love.graphics.print("    _   _\n  /' '|' '\\\n /.--.|.--.\\\n    |   |\n     | |\n     | |\n     | |\n    | : |\n  _/.___.\\_\n",16075 + the_offset_of_all_things, 280 + the_offset_of_all_things1)
+    love.graphics.print("        0\n      .' '.\n     .'-.-'.\n   .'|'-.-'|`.\n  ' .*.   .*. `\n ' '   ' '   ' `\n'    /\\   /\\    `\n|   /  \\ /  \\   |\n|T '    '    ' T|\n|_ _.-'-.-'-._ _|\n|_'_.-'-.-'-._'_|\n| '     *     ' |\n|:A  .-   -.  B:|\n|  .' (o)   '.  |\n|       \\       |\n| '      \\    ' |\n|  .      \\' .  |\n|:R '._   _.' A:|\n'. ___________ .'", 15800 + the_offset_of_all_things, -100 + the_offset_of_all_things1)
+    love.graphics.print("        0\n      .' '.\n     .'-.-'.\n   .'|'-.-'|`.\n  ' .*.   .*. `\n ' '   ' '   ' `\n'    /\\   /\\    `\n|   /  \\ /  \\   |\n|T '    '    ' T|\n|_ _.-'-.-'-._ _|\n|_'_.-'-.-'-._'_|\n| '     *     ' |\n|:A  .-   -.  B:|\n|  .' (o)   '.  |\n|       \\       |\n| '      \\    ' |\n|  .      \\' .  |\n|:R '._   _.' A:|\n'. ___________ .'", 16300 + the_offset_of_all_things, -100 + the_offset_of_all_things1)
+    love.graphics.print("     .'.\n   .' . `.\n  '  ( )  `\n ' _  '  _ `\n'-'_'---'_'-`\n|-' '---' '-|\n|    /'\\    |\n|   / . \\   |\n|   \\ ' /   |\n|'_  \\./  _'|\n|__'-----'__|\n|__:__:__:__|\n:__|__:__|__:\n|__:__|__:__|\n'._|__:__|_.'", 12600 + the_offset_of_all_things, 0 + the_offset_of_all_things1)
     if moving_mountian < 5 then
         love.graphics.setColor(0,0,0)
     elseif moving_mountian < 10 then
@@ -14,9 +34,20 @@ function draw()
     elseif moving_mountian > 24 or moving_mountian <= 24  then
         love.graphics.setColor(0.7,0.7,0.7)
     end
-    love.graphics.setFont(gameFont1)
+
+
+
+
+    love.graphics.print("     .'.\n   .' . `.\n  '  ( )  `\n ' _  '  _ `\n'-'_'---'_'-`\n|-' '---' '-|\n|    /'\\    |\n|   / . \\   |\n|   \\ ' /   |\n|'_  \\./  _'|\n|__'-----'__|\n|__:__:__:__|\n:__|__:__|__:\n|__:__|__:__|\n'._|__:__|_.'", 13000 + the_offset_of_all_things, 0 + the_offset_of_all_things1)
+    love.graphics.print("     .'.\n   .' . `.\n  '  ( )  `\n ' _  '  _ `\n'-'_'---'_'-`\n|-' '---' '-|\n|    /'\\    |\n|   / . \\   |\n|   \\ ' /   |\n|'_  \\./  _'|\n|__'-----'__|\n|__:__:__:__|\n:__|__:__|__:\n|__:__|__:__|\n'._|__:__|_.'", 13400 + the_offset_of_all_things, 0 + the_offset_of_all_things1)
+    love.graphics.print("     .'.\n   .' . `.\n  '  ( )  `\n ' _  '  _ `\n'-'_'---'_'-`\n|-' '---' '-|\n|    /'\\    |\n|   / . \\   |\n|   \\ ' /   |\n|'_  \\./  _'|\n|__'-----'__|\n|__:__:__:__|\n:__|__:__|__:\n|__:__|__:__|\n'._|__:__|_.'", 13800 + the_offset_of_all_things, 0 + the_offset_of_all_things1)
+    love.graphics.print("     .'.\n   .' . `.\n  '  ( )  `\n ' _  '  _ `\n'-'_'---'_'-`\n|-' '---' '-|\n|    /'\\    |\n|   / . \\   |\n|   \\ ' /   |\n|'_  \\./  _'|\n|__'-----'__|\n|__:__:__:__|\n:__|__:__|__:\n|__:__|__:__|\n'._|__:__|_.'", 14200 + the_offset_of_all_things, 0 + the_offset_of_all_things1)
+    love.graphics.print("     .'.\n   .' . `.\n  '  ( )  `\n ' _  '  _ `\n'-'_'---'_'-`\n|-' '---' '-|\n|    /'\\    |\n|   / . \\   |\n|   \\ ' /   |\n|'_  \\./  _'|\n|__'-----'__|\n|__:__:__:__|\n:__|__:__|__:\n|__:__|__:__|\n'._|__:__|_.'", 14600 + the_offset_of_all_things, 0 + the_offset_of_all_things1)
+    love.graphics.print("     .'.\n   .' . `.\n  '  ( )  `\n ' _  '  _ `\n'-'_'---'_'-`\n|-' '---' '-|\n|    /'\\    |\n|   / . \\   |\n|   \\ ' /   |\n|'_  \\./  _'|\n|__'-----'__|\n|__:__:__:__|\n:__|__:__|__:\n|__:__|__:__|\n'._|__:__|_.'", 15000 + the_offset_of_all_things, 0 + the_offset_of_all_things1)
+    love.graphics.print("     .'.\n   .' . `.\n  '  ( )  `\n ' _  '  _ `\n'-'_'---'_'-`\n|-' '---' '-|\n|    /'\\    |\n|   / . \\   |\n|   \\ ' /   |\n|'_  \\./  _'|\n|__'-----'__|\n|__:__:__:__|\n:__|__:__|__:\n|__:__|__:__|\n'._|__:__|_.'", 15400 + the_offset_of_all_things, 0 + the_offset_of_all_things1)
+    love.graphics.print("  _______________\n |#%%%+~~~-     []\n/###%%+++~-     []\n|##%+++~~~--    []\n\\##%%%%++~      []\n |##%%++~_______[]",12250 + the_offset_of_all_things, 340 + the_offset_of_all_things1)
     love.graphics.print(" _______________\n[]     -~~~+%%%#|\n[]     -~+++%%###\\\n[]    --~~~+++%##|\n[]      ~++%%%%##/\n[]_______~++%%##|",10020 + the_offset_of_all_things, 338 + the_offset_of_all_things1)
-    love.graphics.print(" __-####-__\n|#%%####%%#|\n|#%%%++++%%|\n|+%%++|++++|\n|+ |  : | +|\n|  '    '  |\n|][][][][][|",8700 + the_offset_of_all_things,-150 + the_offset_of_all_things1)
+    love.graphics.print(" __-####-__\n|#%%####%%#|\n|#%%%++++%%|\n|+%%++|++++|\n|+ |  : | +|\n|  '    '  |\n|][][][][][|",8800 + the_offset_of_all_things,-150 + the_offset_of_all_things1)
     love.graphics.print(" ______\n|  |~#*|\n|  |___|\n|      |\n|      |\n|======|\n|      |\n|      |\n|______|",9200 + the_offset_of_all_things,280 + the_offset_of_all_things1)
     love.graphics.print(" _________\n|         |\n|         |\n|         |\n|_________|",box1.x + 90 + the_offset_of_all_things, box1.y - 13 + the_offset_of_all_things1)
     love.graphics.print("     ,.-~~~-..\n    //  .12. \\\\\n   || '  |  ' ||\n   || 9  /  3 ||\n    \\\\ '.6.' //\n     '--...--'",600+ 1.3*the_offset_of_all_things,10 + the_offset_of_all_things1)
@@ -173,9 +204,7 @@ function draw()
     if flashofawakening + 30 > intro_num and flashofawakening ~= 0 then
         love.graphics.setColor(0,0,0)
     end
-    if key == true then
-        love.graphics.print("   ____.''.\n   ||  '..'",9250 + the_offset_of_all_things,400 + the_offset_of_all_things1)
-    end
+
     if cat.wayfacing == true then
         if cat.frame == 0 then
             love.graphics.print("              /\\\n          __ ( 'i\n    __,-|\"_   _/\n \"\"'    \\||\"\"\\|| \n        \"--  \"--",cat.x,cat.y)

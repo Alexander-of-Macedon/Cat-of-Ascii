@@ -25,7 +25,7 @@ function vents()
         elseif cat_ventpos == 8 then
             cat.wayfacing = false
             vent_animation = true
-            the_offset_of_all_things = -8450
+            the_offset_of_all_things = -8550
             cat.x = 168
             the_offset_of_all_things1 = 300
             cat.y = 100
@@ -44,9 +44,15 @@ function vents()
             cat.x = 168
             the_offset_of_all_things1 = 0
             cat.y = 350
+        elseif cat_ventpos == 11 then
+            cat.wayfacing = true
+            vent_animation = true
+            the_offset_of_all_things = -12030
+            cat.x = 168
+            the_offset_of_all_things1 = 0
+            cat.y = 350
         end
     end
-    love.graphics.print(tostring(cat_ventpos),200)
     if vexitanim == "left" and moving_mountian <= 1 then
         love.graphics.setColor(0.9,0.9,0.9)
         jump_switc2 = true
@@ -126,8 +132,7 @@ function vents()
 
     end
     if ventsentrylog == true then
-        love.graphics.print(tostring(cat.wayfacing))
-        love.graphics.print("\t\t\t\t\t" .. tostring(moving_mountian))
+
         if moving_mountian >= 0 and moving_mountian < 5 then
             love.graphics.setColor(0,0,0)
         elseif moving_mountian >= 5 and moving_mountian < 10 then
@@ -173,8 +178,10 @@ function vents()
         love.graphics.setColor(0.9,0.9,0.9)
     end
     love.graphics.print("                                       |    |\n              _________________________|    |\n             /                               \\\n            /    ______      ____________     \\\n __________/    /      |    |            \\     \\______\n               /       |    |             \\            \n _______      /        |    |              |     _____\n        |    |                   __________|    |\n        |    |       _____      /               |\n       /    /             \\     |     __________|\n._____/    /         _     \\____|    |____\n'.        /           \\                   \n;________/             \\__________________\n'",65,50)
-
     love.graphics.setColor(0,0.9,0)
+    if key1[1] == 0 or key1[2] == 0 then
+        love.graphics.print("X", 327, 265)
+    end
     if cat.frame == 0 then
         love.graphics.print(" /\\\n(' ) __\n \\_   _\"|-,__ \n ||/\"\"||/    '\"\"\n --\"  --\"",300,380)
         love.graphics.print("..",320,500)
