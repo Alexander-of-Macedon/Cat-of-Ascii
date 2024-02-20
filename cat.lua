@@ -1,4 +1,6 @@
 function cat_game()
+
+
     boxtop.x1 = box1.x - 50
     boxtop.x2 = box1.x + 50
     if the_offset_of_all_things == -8550 and the_offset_of_all_things1 == 300 then

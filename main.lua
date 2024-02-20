@@ -1,5 +1,5 @@
 function love.load()
-    dialouge = {"A long time ago, a traveler was traversing the\nElder Mountians","Halfway through his trip, he encountered a \nterrible storm...","seeking shetler, the traveler found a cave \nand dashed into it","Hello traveller, how does it go?","I have been trapped here for melenia,\nby means of a seal","If thou aids me in a small task, you shall\nhave the cake","Will you aid me in this trifle?","...","No?","do you think you have a choice?","Now listen to me carefully","Very well, now listen to me carefully","The seal that holds me here can be broken, by \nclosing the book in the great hall","For this reason you will inhabit the mind of \na cat","now go and fufill your task","To control the cat, use the left and right arrow\nkeys to move. To jump forwards use the space key\n,and to jump up use the up arrow key","to navigate through the vents use the arrow keys,\nand to exit press space.","The buttons on the board control what vents are\nopen, to navigate use the arrow keys","You should not be here","That accursed dragon must have sent you ","I am left with only one choice, You must be \nerased "}
+    dialouge = {"A long time ago, a traveler was traversing the\nElder Mountians","Halfway through his trip, he encountered a \nterrible storm...","seeking shetler, the traveler found a cave \nand dashed into it","Hello traveller, how does it go?","I have been trapped here for millenia,\nby means of a seal","If thou aids me in a small task, you shall\nhave the cake","Will you aid me in this trifle?","...","No?","do you think you have a choice?","Now listen to me carefully","Very well, now listen to me carefully","The seal that holds me here can be broken, by \nclosing the book in the great hall","For this reason you will inhabit the mind of \na cat","now go and fufill your task","To control the cat, use the left and right arrow\nkeys to move. To jump forwards use the space key.\nTo jump further hold space longer. To jump up use \nthe up arrow key","to navigate through the vents use the arrow keys,\nand to exit press space.","The buttons on the board control what vents are\nopen, to navigate use the arrow keys","You should not be here","That accursed dragon must have sent you ","I am left with only one choice, I send you back \nto the world you came from "}
     -- dialouge vars
     cstored = nil
     question = false
@@ -172,7 +172,7 @@ function love.load()
     sidewaysb.y = -110
     Platform:new(p)
     p.x1 = 4029
-    p.x2 = 4250
+    p.x2 = 4350
     p.y = 135
     Platform:new(bs1)
     bs1.x1 = 4800
@@ -362,7 +362,6 @@ function love.load()
 
 
  
-    audio_intro = love.audio.newSource("intro_drama.mp3","static")
     music1 = love.audio.newSource("27 - 1. Moderato.mp3","stream")
     music1:setLooping(true)
     --music1:play()
@@ -632,7 +631,7 @@ function love.keypressed(key)
                     moving_mountian = 20
                     vexitanim = "left"
                 end
-            elseif cat_ventpos == 11 and mbchoice == 2 then
+            elseif cat_ventpos == 11  then
                     moving_mountian = 20
                     if key1[1] == 1 and key1[2] == 1 then
                     vexitanim = "right"

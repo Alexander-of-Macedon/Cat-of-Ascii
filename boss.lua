@@ -33,7 +33,7 @@ function boss()
                 dialouge_finished = false
                 dialouge_talk = true
                 current_dialouge = dialouge[dialouge_num]
-            elseif dialouge_num == 21 and dialouge_letter < 51 then
+            elseif dialouge_num == 21 and dialouge_letter < 67 then
                 dialouge_num = 21
                 dialouge_talk = true
                 dialouge_switch = true
